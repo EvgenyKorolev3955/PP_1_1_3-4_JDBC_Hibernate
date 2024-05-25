@@ -16,10 +16,10 @@ public class UserDaoJDBCImpl extends Util implements UserDao {
     public void createUsersTable() {
         String sql = new StringBuilder()
                 .append("CREATE TABLE IF NOT EXISTS users (\n")
-                .append("  `id` INT NOT NULL AUTO_INCREMENT,\n")
+                .append("  `id` BIGINT NOT NULL AUTO_INCREMENT,\n")
                 .append("  `name` VARCHAR(45) NOT NULL,\n")
                 .append("  `lastName` VARCHAR(45) NOT NULL,\n")
-                .append("  `age` INT UNSIGNED NOT NULL,\n")
+                .append("  `age` TINYINT UNSIGNED NOT NULL,\n")
                 .append("  PRIMARY KEY (`id`))\n")
                 .append("ENGINE = InnoDB\n")
                 .append("DEFAULT CHARACTER SET = utf8;\n").toString();
